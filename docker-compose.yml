@@ -1,0 +1,11 @@
+version: "3"
+services:
+  scraper:
+    image: newsscraper
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 30000:30000
+    volumes:
+      - ./:/app
